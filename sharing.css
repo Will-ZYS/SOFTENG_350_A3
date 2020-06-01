@@ -1,0 +1,16 @@
+.link-header {
+    border: 1px solid #cab6b6;
+    text-align: left;
+    padding: 8px;
+}
+
+.link-item {
+    border: 1px solid #cab6b6;
+    text-align: left;
+    padding: 8px;
+}
+
+.link-share {
+    border-collapse: collapse;
+    width: 100%;
+}

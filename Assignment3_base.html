@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="sharing.css">
+<style>
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
 </style>
@@ -54,16 +56,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>File</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <label>Link sharing on</label>
+      <table class="link-share">
+        <tr>
+          <th class="link-header">
+            Anyone with the link can edit
+            <a class="w3-button w3-light-grey w3-right">Copy Link</a>
+          </th>
+          <!-- <th class="link-header"><a class="w3-button w3-light-grey w3-right">Copy Link</a></th> -->
+        </tr>
+        <tr>
+          <td class="link-item">https://se350.assignment3.co</td>
+        </tr>
+      </table>
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Done</i></a>
-        <a class="w3-button w3-light-grey w3-right">Advanced</i></a> 
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Done</a>
+        <a class="w3-button w3-light-grey w3-right">Advanced</a> 
       </div>    
     </div>
   </div>
