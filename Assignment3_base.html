@@ -18,28 +18,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
-  <div id="Demo1" class="w3-hide w3-animate-left">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();" id="firstTab">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon3.png" style="width:15%;"><span class="w3-opacity w3-large">File 1</span>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
-     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon5.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File3');w3_close();">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon2.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
-  </div>
+
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
@@ -116,8 +95,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 </div>
 
 <script>
-var openInbox = document.getElementById("myBtn");
-openInbox.click();
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -129,32 +106,6 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-function myFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show"; 
-    x.previousElementSibling.className += " w3-red";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-red", "");
-  }
-}
-
-doShare("File1")
-function doShare(fileName) {
-  var i;
-  var x = document.getElementsByClassName("file");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x = document.getElementsByClassName("test");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" w3-light-grey", "");
-  }
-  document.getElementById(fileName).style.display = "block";
-  event.currentTarget.className += " w3-light-grey";
-}
 </script>
 
 <script>
