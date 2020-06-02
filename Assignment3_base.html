@@ -60,7 +60,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <table class="link-share">
         <tr>
           <th class="link-header">
-            Anyone with the link can edit
+            <select name="options" id="options">
+              <option value="any">Anyone with the link can edit</option>
+              <option value="uoa">Only people at the University of Auckland can edit</option>
+            </select>
+            <!-- Anyone with the link can edit -->
             <a class="w3-button w3-light-grey w3-right">Copy Link</a>
           </th>
         </tr>
