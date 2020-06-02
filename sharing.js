@@ -1,10 +1,17 @@
 function toggleAdvancedSharing() {
     if (document.getElementById('advanced-button').innerHTML === "Advanced Sharing") {
         document.getElementById('advanced-sharing').style.display = 'block';
-        document.getElementById('advanced-button').innerHTML = "Hide Advanced Sharing";
+        document.getElementById('advanced-button').innerHTML = "Cancel Advanced Sharing";
     } else {
         document.getElementById('advanced-sharing').style.display = 'none';
         document.getElementById('advanced-button').innerHTML = "Advanced Sharing";
+
+        // uncheck all the groups
+        var groups = document.getElementsByClassName("group-check");
+        var i;
+        for (i = 0; i < groups.length; i++) {
+            groups[i].checked = false;
+        }
     }
 }
 
