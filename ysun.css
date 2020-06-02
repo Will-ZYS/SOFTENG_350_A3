@@ -5,37 +5,33 @@
 	padding: 0;
 }
 
-svg{
-	overflow: visible;
-	vertical-align: top;
-}
-
 .header{
 	width: auto;
-	height: 50px;
+	height: 65px;
 	border-bottom: 1px solid #DFDFDF;
 	background-color: rgba(255,255,255,1.00);
 	align-items: center;
-	display: flex;
+	display: block;
 }
 
 .header-left{
 	display: flex;
 	max-width: 300px;
 	width: 100%;
-	height: 40px;
+	padding: 0px 30px 0px 0px;
 	align-items: center;
 	position: relative;
 }
 
 .logo{
-	left: 20px;
+	left: 10px;
 	position: relative;
 }
 
 .title{
 	font-size: large;
-	left: 40px;
+	left: 20px;
+	margin-right: 20px;
 	position: relative;
 	cursor: pointer;
 }
@@ -46,11 +42,12 @@ svg{
 }
 
 .profile{
-	left: 20px;
+	left: 10px;
 	border-right: 1px solid #DFDFDF;
 	display: flex;
 	position: relative;
 	align-items: center;
+	justify-content: center;
 }
 
 .profile-img{
@@ -68,51 +65,31 @@ svg{
 	
 }
 .topnav{
+	height: 65px;
 	display:flex;
+	padding: 8px;
+	position: relative;
 }
 
 .search-container{
 	display: flex;
-	background: #FFFFFF;
-	border: 0.5px solid #000000;
+	background: transparent;
+	border: 0.5px solid #C1B9B9;
 	border-radius: 8px;
-	height: 40px;
-    width: 800px;
+/*	height: 65px;*/
+    width: 760px;
+	padding: 0px 5px;
+	align-items: center;
+/*	justify-content: center;*/
 	position: relative;
-/*	margin: auto;*/
-/*	width: 75%;*/
-/*	margin: 0 auto;*/
-/*	padding: 0px auto;*/
 }
 
-/*
-.search-button{
-	-webkit-mask-image: url(search.svg);
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 20px;
-	color: transparent;
-	height: 40px;
-    width: 20px;
-	left: 10px;
-    position: relative;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-*/
-
-/*
-.search-button:hover{
-	background: #F1161A;
-}
-*/
 
 .search-field{
 	background: transparent;
 	border: none;
-	padding: 0px 15px;
-	width: 100%;
+	padding: 0px 5px;
+	width: 90%;
 	overflow: hidden;
 	outline: none;
 	position: relative;
@@ -124,7 +101,7 @@ svg{
 }
 
 .menu{
-	left: 20px;
+	left: 10px;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -135,7 +112,7 @@ svg{
 	height: 40px;
 	background: transparent;
 	border-radius: 20px;
-	margin: 0px 8px;
+	margin: 0px 6px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
