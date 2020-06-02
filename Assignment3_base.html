@@ -60,10 +60,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <table class="link-share">
         <tr>
           <th class="link-header">
-            <select name="options" id="options">
-              <option value="any">Anyone with the link can edit</option>
-              <option value="uoa">Only people at the University of Auckland can edit</option>
-            </select>
+            <div class="w3-dropdown-click">
+              <button id="dropdown-button" class="w3-button w3-light-grey" onclick="toggleDropDown()">Anyone with the link can edit <i class="fa fa-caret-down"></i></button>
+              <div id="access-content" class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Anyone with the link can edit</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Only people at the University of Auckland can edit</a>
+              </div>
+            </div>
             <a class="w3-button w3-light-grey w3-right">Copy Link</a>
           </th>
         </tr>
