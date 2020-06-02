@@ -64,7 +64,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
               <option value="any">Anyone with the link can edit</option>
               <option value="uoa">Only people at the University of Auckland can edit</option>
             </select>
-            <!-- Anyone with the link can edit -->
             <a class="w3-button w3-light-grey w3-right">Copy Link</a>
           </th>
         </tr>
@@ -78,9 +77,25 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <label>People</label>
       <input class="w3-input w3-border w3-margin-bottom w3-margin-top" type="text" placeholder="Enter email addresses or names...">
 
+      <!-- Advanced sharing content -->
+      <div id="advanced-sharing">
+        <hr>
+        <label>Select groups to share:</label>
+        <div class="group-select">
+          <input class="w3-check" type="checkbox">
+          <label class="project-names">Project 1</label>
+          <input class="w3-check" type="checkbox">
+          <label class="project-names">Project 2</label>
+          <input class="w3-check" type="checkbox">
+          <label class="project-names">Project 3</label>
+          <input class="w3-check" type="checkbox">
+          <label class="project-names">Project 4</label>
+        </div>
+      </div>
+
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Done</a>
-        <a class="w3-button w3-light-grey w3-right">Advanced</a> 
+        <a id="advanced-button" class="w3-button w3-light-grey w3-right" onclick="toggleAdvancedSharing()">Advanced Sharing</a> 
       </div>    
     </div>
   </div>
@@ -178,6 +193,8 @@ function doShare(fileName) {
 var openTab = document.getElementById("firstTab");
 openTab.click();
 </script>
+
+<script type="text/javascript" src="sharing.js"></script>
 
 </body>
 </html> 
