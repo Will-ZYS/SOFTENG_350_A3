@@ -3,6 +3,7 @@
 <title>Assignment 3 Base code Adapted from W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="ysun.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
@@ -11,6 +12,39 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 </style>
 <body>
 
+<header class="header">
+	<div class="topnav">
+		<div class="header-left">
+			<img class="logo" src="icon_browser.png" alt width="40" height="40">
+			<span class="title">HCI Project DRIVE</span>
+		</div>
+	  	<div class="search-container">
+<!--			<button type="submit" class="search-button"></button>-->
+			<div class="icon-background">
+				<img class="search-icon" src="icon-search.png" alt width="24" height="24">
+			</div>
+			<input type="search" class="search-field" placeholder="Search Drives" name="search">
+		</div>
+		<div class="profile">
+			<span class="profile-name">a name</span>
+			<img class="profile-img" src="p_thebund.jpg" alt width="40" height="40">
+		</div>
+		<div class="menu">
+			<div class="icon-background">
+				<img class="status-icon" src="icon-tickbox.png" alt width="24" height="24">
+			</div>
+			<div class="icon-background">
+				<img class="help-icon" src="icon-help.png" alt width="24" height="24">
+			</div>
+			<div class="icon-background">
+				<img class="gear-icon" src="icon-gear.png" alt width="24" height="24">
+			</div>
+			<div class="icon-background">
+				<img class="menu-icon" src="icon_menu.png" alt width="24" height="24">
+			</div>
+		</div>
+	</div>
+</header>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-edit"></i> &nbsp; Assignment 3 template <br/> based on
