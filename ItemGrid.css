@@ -4,3 +4,36 @@
   	float: left;
   	padding: 15px;
 }
+
+.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.initial {
+    width: 20%;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.file-icon {
+    width: 15%;
+}
+
+.Owner-text {
+    margin-left: 10%;
+}
+
+.Shared-people-text {
+    margin-left: 20%;
+}
+
+.Type-of-file-text {
+    margin-left: 8%;
+    margin-right: 10%;
+}
+
+.icon {
+    width: 20%;
+    padding: 12px;
+}
