@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="sideNav.css">
+<style>
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
 </style>
@@ -13,15 +15,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-edit"></i> &nbsp; Assignment 3 template <br/> based on
-  <span><img src="https://www.w3schools.com/images/w3schools.png" style="width:30%"></span> template</a>
+  
+  <div id="div-new-project" class= "div-wrapper">
+    <div class="w3-display-middle w3-card-2 ">
+	  <a class="w3-button google-drive-blue"><img id="img-plus" src="plus.png">Create New Project</a>
+    </div>
+  </div>
+    
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+  <div style="margin-left:5px;">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>My Drive</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-margin-right"></i>Computer</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  </div>
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->

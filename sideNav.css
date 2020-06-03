@@ -1,2 +1,25 @@
 /* CSS Document */
 
+.google-drive-blue{
+  background: #4686FC;
+  color:white;
+}
+
+.transparent-background{
+  background: transparent;
+}
+
+.div-wrapper{
+  position: relative;
+}
+
+
+#img-plus{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+#div-new-project{
+  height: 70px;
+}
