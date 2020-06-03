@@ -25,12 +25,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
 
-  <div style="margin-left:5px;">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>My Drive</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-margin-right"></i>Computer</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <div>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-MyDrive" onclick="doShare('sideNavItem-MyDrive');w3_close();"><i class="fa fa-paper-plane w3-margin-right" ></i>My Drive</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();"><i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-desktop w3-margin-right"></i>Computer</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
   </div>
 </nav>
 
@@ -115,12 +115,9 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-
-var openTab = document.getElementById("firstTab");
-openTab.click();
-
 </script>
 
+<script src="sideNav.js"></script>
 
 </body>
 </html> 

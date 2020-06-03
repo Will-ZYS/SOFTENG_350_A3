@@ -36,3 +36,10 @@
   margin: 5px;
 }
 
+.sideNavItem:hover{
+  background-color: #EEEEEE !important;
+}
+
+.sideNavItem-active{
+  border-left: 10px solid #3F6FBB;
+}
