@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="ysun.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link href="https://fonts.googleapis.com/css?family=RobotoDraft" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="sharing.css">
 <link rel="stylesheet" href="ItemGrid.css">
+<link rel="stylesheet" href="sideNav.css">
+
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
@@ -50,36 +53,29 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 </header>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-edit"></i> &nbsp; Assignment 3 template <br/> based on
-  <span><img src="https://www.w3schools.com/images/w3schools.png" style="width:30%"></span> template</a>
+  
+  <div id="div-new-project" class= "div-wrapper">
+    <div class="w3-display-middle">
+	   <a class="w3-button google-drive-blue w3-card-2 w3-round-medium btn-new-project">
+      <i class="fa fa-plus-square w3-margin-right" aria-hidden="true"></i>Create New Project</a>
+    </div>
+  </div>
+    
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
-  <div id="Demo1" class="w3-hide w3-animate-left">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();" id="firstTab">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon3.png" style="width:15%;"><span class="w3-opacity w3-large">File 1</span>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
-     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon5.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File3');w3_close();">
-      <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon2.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </a>
+
+  <div>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-MyDrive" onclick="doShare('sideNavItem-MyDrive');w3_close();">
+    <i class="fa fa-paper-plane w3-margin-right" ></i>My Drive</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();">
+    <i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Computer" onclick="doShare('sideNavItem-Computer');w3_close();">
+    <i class="fa fa-desktop w3-margin-right"></i>Computer</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Shared" onclick="doShare('sideNavItem-Shared');w3_close();">
+    <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Trash" onclick="doShare('sideNavItem-Trash');w3_close();">
+    <i class="fa fa-trash w3-margin-right"></i>Trash</a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
@@ -236,8 +232,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 	
 <script>
-var openInbox = document.getElementById("myBtn");
-openInbox.click();
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -248,39 +242,9 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-
-function myFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show"; 
-    x.previousElementSibling.className += " w3-red";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-red", "");
-  }
-}
-
-doShare("File1")
-function doShare(fileName) {
-  var i;
-  var x = document.getElementsByClassName("file");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x = document.getElementsByClassName("test");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" w3-light-grey", "");
-  }
-  document.getElementById(fileName).style.display = "block";
-  event.currentTarget.className += " w3-light-grey";
-}
 </script>
 
-<script>
-var openTab = document.getElementById("firstTab");
-openTab.click();
-</script>
+<script src="sideNav.js"></script>
 
 <script type="text/javascript" src="sharing.js"></script>
 
