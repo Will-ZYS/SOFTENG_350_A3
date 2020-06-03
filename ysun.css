@@ -76,11 +76,9 @@
 	background: transparent;
 	border: 0.5px solid #C1B9B9;
 	border-radius: 8px;
-/*	height: 65px;*/
     width: 760px;
 	padding: 0px 5px;
 	align-items: center;
-/*	justify-content: center;*/
 	position: relative;
 }
 
@@ -92,12 +90,13 @@
 	width: 90%;
 	overflow: hidden;
 	outline: none;
+	opacity: 25%;
 	position: relative;
 }
 
 .search-field:hover{
 	transition: opacity .25s ease;
-	opacity: 25%;
+	opacity: 100%;
 }
 
 .menu{
