@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="sharing.css">
+<style>
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
 </style>
@@ -48,22 +50,55 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding top-sharing-bar">
        <span onclick="document.getElementById('id01').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>File</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <label>Link sharing on</label>
+      <table class="link-share">
+        <tr>
+          <th class="link-header">
+            <div class="w3-dropdown-click">
+              <button id="dropdown-button" class="w3-button w3-light-grey" onclick="toggleDropDown()">Anyone with the link can edit <i class="fa fa-caret-down"></i></button>
+              <div id="access-content" class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Anyone with the link can edit</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Only people at the University of Auckland can edit</a>
+              </div>
+            </div>
+            <a class="w3-button w3-light-grey w3-right">Copy Link</a>
+          </th>
+        </tr>
+        <tr>
+          <td class="link-item">https://se350.assignment3.co</td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <label>People</label>
+      <input class="w3-input w3-border w3-margin-bottom w3-margin-top" type="text" placeholder="Enter email addresses or names...">
+
+      <!-- Advanced sharing content -->
+      <div id="advanced-sharing">
+        <hr>
+        <label>Select groups to share:</label>
+        <div class="group-select">
+          <input class="w3-check group-check" type="checkbox">
+          <label class="project-names">Project 1</label>
+          <input class="w3-check group-check" type="checkbox">
+          <label class="project-names">Project 2</label>
+          <input class="w3-check group-check" type="checkbox">
+          <label class="project-names">Project 3</label>
+          <input class="w3-check group-check" type="checkbox">
+          <label class="project-names">Project 4</label>
+        </div>
+      </div>
+
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button done-button" onclick="document.getElementById('id01').style.display='none'">Done</a>
+        <a id="advanced-button" class="w3-button w3-light-grey w3-right" onclick="toggleAdvancedSharing()">Advanced Sharing</a> 
       </div>    
     </div>
   </div>
@@ -161,6 +196,8 @@ function doShare(fileName) {
 var openTab = document.getElementById("firstTab");
 openTab.click();
 </script>
+
+<script type="text/javascript" src="sharing.js"></script>
 
 </body>
 </html> 
