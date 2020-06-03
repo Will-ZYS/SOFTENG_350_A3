@@ -18,7 +18,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   
   <div id="div-new-project" class= "div-wrapper">
     <div class="w3-display-middle">
-	   <a class="w3-button google-drive-blue w3-card-2 w3-round-medium btn-new-project"><img id="img-plus" src="./assets/plus.png">Create New Project</a>
+	   <a class="w3-button google-drive-blue w3-card-2 w3-round-medium btn-new-project">
+      <i class="fa fa-plus-square w3-margin-right" aria-hidden="true"></i>Create New Project</a>
     </div>
   </div>
     
@@ -26,11 +27,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
 
   <div>
-  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-MyDrive" onclick="doShare('sideNavItem-MyDrive');w3_close();"><i class="fa fa-paper-plane w3-margin-right" ></i>My Drive</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();"><i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-desktop w3-margin-right"></i>Computer</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-MyDrive" onclick="doShare('sideNavItem-MyDrive');w3_close();">
+    <i class="fa fa-paper-plane w3-margin-right" ></i>My Drive</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();">
+    <i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Computer" onclick="doShare('sideNavItem-Computer');w3_close();">
+    <i class="fa fa-desktop w3-margin-right"></i>Computer</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Shared" onclick="doShare('sideNavItem-Shared');w3_close();">
+    <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Trash" onclick="doShare('sideNavItem-Trash');w3_close();">
+    <i class="fa fa-trash w3-margin-right"></i>Trash</a>
   </div>
 </nav>
 
