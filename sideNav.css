@@ -1,18 +1,34 @@
 /* CSS Document */
-
+/*
+64AFED
+3F6FBB
+314582
+1E274B
+*/
 .google-drive-blue{
-  background: #4686FC;
+  background: #3F6FBB;
   color:white;
-}
-
-.transparent-background{
-  background: transparent;
 }
 
 .div-wrapper{
   position: relative;
 }
 
+#div-new-project{
+  height: 70px;
+  margin: 15px 0px;
+}
+
+.btn-new-project{
+  transition-duration: 0.4s;
+  border: 2px solid #3F6FBB;
+}
+
+.btn-new-project:hover {
+  color: black;
+  border: 2px solid #3F6FBB;
+  background-color: #BBBBBB !important;
+}
 
 #img-plus{
   width: 20px;
@@ -20,6 +36,3 @@
   margin: 5px;
 }
 
-#div-new-project{
-  height: 70px;
-}
