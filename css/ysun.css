@@ -53,12 +53,13 @@
 .profile-img{
 	border-radius: 20px;
 	margin: 0px 10px 0px 2px;
+	cursor: pointer;
 	position: relative;
 }
 
 .profile-name{
 	width: 60px;
-	margin: 0px 10px;
+	margin: 0px 6px 0px 10px;
 	font-size: large;
 	align-items: center;
 	position: relative;
