@@ -1,3 +1,7 @@
+function showShare() {
+    document.getElementById('id01').style.display = 'block';
+}
+
 function toggleAdvancedSharing() {
     if (document.getElementById('advanced-button').innerHTML === "Advanced Sharing") {
         document.getElementById('advanced-sharing').style.display = 'block';
