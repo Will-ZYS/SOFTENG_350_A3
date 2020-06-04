@@ -85,7 +85,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-animate-zoom modal">
+  <div class="w3-modal-content modal">
     <div class="w3-container w3-padding top-sharing-bar">
        <span onclick="document.getElementById('id01').style.display='none'"
        class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
@@ -97,8 +97,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
         <tr>
           <th class="link-header">
             <div class="w3-dropdown-click">
-              <button id="dropdown-button" class="w3-button w3-light-grey" onclick="toggleDropDown()">Anyone with the link can edit <i class="fa fa-caret-down"></i></button>
+              <button id="dropdown-button" class="w3-button w3-light-grey" onclick="toggleDropDown()">Anyone with the link can view <i class="fa fa-caret-down"></i></button>
               <div id="access-content" class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Anyone with the link can view</a>
                 <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Anyone with the link can edit</a>
                 <a href="#" class="w3-bar-item w3-button" onclick="select(this)">Only people at the University of Auckland can edit</a>
               </div>
@@ -141,8 +142,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 </div>
 
 <!-- confirmation for sharing -->
-<div id="id02" class="w3-modal modal" style="z-index:4">
-  <div class="w3-modal-content w3-animate-zoom">
+<div id="id02" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content modal">
     <div class="w3-container w3-padding top-sharing-bar">
       <span onclick="document.getElementById('id02').style.display='none'"
        class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
