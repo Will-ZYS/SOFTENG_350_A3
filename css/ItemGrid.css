@@ -1,16 +1,22 @@
 /* CSS Document */
 .col {
-	width: 33%;
+	width: 320px;
   	float: left;
   	padding: 15px;
 }
 
+.card-title {
+    margin-left: 5%;
+}
+
 .avatar {
+	cursor: pointer;
     width: 40%;
-    border-radius: 50%;
+    margin-top: 20px;
 }
 
 .initial {
+	cursor: pointer;
     width: 20%;
     border-radius: 50%;
     padding: 5px;
@@ -36,6 +42,11 @@
 }
 
 .icon {
+	cursor: pointer;
     width: 20%;
     padding: 12px;
+}
+
+.link {
+    margin-left: 8%;
 }
