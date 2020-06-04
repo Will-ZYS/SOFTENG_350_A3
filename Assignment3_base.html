@@ -21,7 +21,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <header class="header">
 	<div class="topnav">
 		<div class="header-left">
-			<img class="logo" src="assets/icon_browser.png" alt width="40" height="40">
+			<img class="logo" src="assets/icon_drive.png" alt width="40" height="40">
 			<span class="title">HCI Project DRIVE</span>
 		</div>
 	  	<div class="search-container">
@@ -32,8 +32,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 			<input type="search" class="search-field" placeholder="Search Drives" name="search">
 		</div>
 		<div class="profile">
-			<span class="profile-name">a name</span>
-			<img class="profile-img" src="assets/p_thebund.jpg" alt width="40" height="40">
+			<span class="profile-name">Robert</span>
+			<img class="profile-img" src="assets/img_profile.png" alt width="40" height="40">
 		</div>
 		<div class="menu">
 			<div class="icon-background">
@@ -53,7 +53,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 </header>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:300px;overflow: hidden; margin-bottom: -2000px; padding-bottom: 2000px;position:absolute !important;" id="mySidebar">
-  <div style="">
   <div id="div-new-project" class= "div-wrapper">
     <div class="w3-display-middle">
 	   <a class="w3-button google-drive-blue w3-card-2 w3-round-medium btn-new-project">
@@ -73,6 +72,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <i class="fa fa-desktop w3-margin-right"></i>Computer</a>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Shared" onclick="doShare('sideNavItem-Shared');w3_close();">
     <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
+  <div class="w3-panel w3-border" style="margin:5px 10px !important;padding:0"></div>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Canvas" onclick="doShare('sideNavItem-Canvas');w3_close();">
+    <i class="fa fa-upload w3-margin-right" aria-hidden="true"></i>Submit to Canvas</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-ADB" onclick="doShare('sideNavItem-ADB');w3_close();">
+    <i class="fa fa-upload w3-margin-right" aria-hidden="true"></i>Submit to ADB</a>
+  <div class="w3-panel w3-border" style="margin:5px 10px !important;padding:0"></div>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Trash" onclick="doShare('sideNavItem-Trash');w3_close();">
     <i class="fa fa-trash w3-margin-right"></i>Trash</a>
   </div>
@@ -128,9 +133,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
 
       <div class="w3-section">
-        <a class="w3-button done-button" onclick="document.getElementById('id01').style.display='none'">Done</a>
+        <a class="w3-button done-button" onclick="submitShare()">Share</a>
         <a id="advanced-button" class="w3-button w3-light-grey w3-right" onclick="toggleAdvancedSharing()">Advanced Sharing</a> 
       </div>    
+    </div>
+  </div>
+</div>
+
+<!-- confirmation for sharing -->
+<div id="id02" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding top-sharing-bar">
+      <span onclick="document.getElementById('id02').style.display='none'"
+       class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Share File</h2>
+    </div>
+    <div class="w3-panel">
+      <h3>Successfully shared!</h3>
+      <div class="w3-section w3-right">
+        <a class="w3-button done-button" onclick="document.getElementById('id02').style.display='none'">Done</a>
+      </div>   
     </div>
   </div>
 </div>
@@ -141,7 +163,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Page content -->
 <div class="w3-main" style="margin-left:300px;">
 <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
-<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
 
 <div class="w3-container">
 	<div class="row">
@@ -164,7 +185,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                     </p>
                 </div>
                 <div class="w3-row w3-padding">
-                    <img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png">
+                    <a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png">
                 </div>
             </div>
 		</div>
@@ -178,7 +199,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon5.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
 		<div class="col">
@@ -191,7 +212,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon5.png"><img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
 	</div>
@@ -206,7 +227,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon4.png"></p></div>
-                <div class="w3-row w3-padding"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
         <div class="col">
@@ -219,7 +240,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
         <div class="col">

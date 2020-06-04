@@ -1,12 +1,12 @@
 /* CSS Document */
 /*
 64AFED
-3F6FBB
+3f8cda
 314582
 1E274B
 */
 .google-drive-blue{
-  background: #3F6FBB;
+  background: #3f8cda;
   color:white;
 }
 
@@ -21,12 +21,12 @@
 
 .btn-new-project{
   transition-duration: 0.4s;
-  border: 2px solid #3F6FBB;
+  border: 2px solid #3f8cda;
 }
 
 .btn-new-project:hover {
   color: black;
-  border: 2px solid #3F6FBB;
+  border: 2px solid #3f8cda;
   background-color: #EEEEEE !important;
 }
 
@@ -41,6 +41,6 @@
 }
 
 .sideNavItem-active{
-  border-left: 4px solid #3F6FBB !important;
+  border-left: 4px solid #3f8cda !important;
   background-color: #EEEEEE !important;
 }
