@@ -1,3 +1,7 @@
+function showShare() {
+    document.getElementById('id01').style.display = 'block';
+}
+
 function toggleAdvancedSharing() {
     if (document.getElementById('advanced-button').innerHTML === "Advanced Sharing") {
         document.getElementById('advanced-sharing').style.display = 'block';
@@ -30,6 +34,11 @@ function select(element) {
     var button = document.getElementById("dropdown-button");
     button.innerHTML = content + " <i class='fa fa-caret-down'></i>";
     list.className = list.className.replace(" w3-show", "");
+}
+
+function submitShare() {
+    document.getElementById('id01').style.display = 'none';
+    document.getElementById('id02').style.display = 'block';
 }
 
 window.onclick = (event) => {
