@@ -128,9 +128,25 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
 
       <div class="w3-section">
-        <a class="w3-button done-button" onclick="document.getElementById('id01').style.display='none'">Done</a>
+        <a class="w3-button done-button" onclick="submitShare()">Share</a>
         <a id="advanced-button" class="w3-button w3-light-grey w3-right" onclick="toggleAdvancedSharing()">Advanced Sharing</a> 
       </div>    
+    </div>
+  </div>
+</div>
+
+<div id="id02" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding top-sharing-bar">
+      <span onclick="document.getElementById('id02').style.display='none'"
+       class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Share File</h2>
+    </div>
+    <div class="w3-panel">
+      <h3>Successfully shared!</h1>
+      <div class="w3-section w3-right">
+        <a class="w3-button done-button" onclick="document.getElementById('id02').style.display='none'">Done</a>
+      </div>   
     </div>
   </div>
 </div>

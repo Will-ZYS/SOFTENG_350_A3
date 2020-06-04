@@ -32,6 +32,11 @@ function select(element) {
     list.className = list.className.replace(" w3-show", "");
 }
 
+function submitShare() {
+    document.getElementById('id01').style.display = 'none';
+    document.getElementById('id02').style.display = 'block';
+}
+
 window.onclick = (event) => {
     if (!event.target.matches('#dropdown-button')) {
         var dropDown = document.getElementById("access-content");
