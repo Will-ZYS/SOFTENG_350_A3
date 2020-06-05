@@ -44,3 +44,10 @@
   border-left: 4px solid #3f8cda !important;
   background-color: #EEEEEE !important;
 }
+
+.sideNav-Divider{
+  margin:5px 10px !important;
+  background: #ccc;
+  padding:0px;
+  height: 0px;
+}

@@ -1,6 +1,6 @@
 /* CSS Document */
 .col {
-	width: 320px;
+	width: 340px;
   	float: left;
   	padding: 15px;
 }
@@ -48,5 +48,12 @@
 }
 
 .link {
-    margin-left: 8%;
+    margin-left: 13%;
+}
+
+.flex-container {
+  display: flex;
+  height:80vh;
+  justify-content: center;
+  align-items: center;
 }
