@@ -59,25 +59,28 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <i class="fa fa-plus-square w3-margin-right" aria-hidden="true"></i>Create New Project</a>
     </div>
   </div>
-    
+
+  <!-- the close tab on small screen size -->
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
 
   <div>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-MyDrive" onclick="doShare('sideNavItem-MyDrive');w3_close();">
     <i class="fa fa-paper-plane w3-margin-right" ></i>My Drive</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Shared" onclick="doShare('sideNavItem-Shared');w3_close();">
+    <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();">
     <i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Computer" onclick="doShare('sideNavItem-Computer');w3_close();">
     <i class="fa fa-desktop w3-margin-right"></i>Computer</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Shared" onclick="doShare('sideNavItem-Shared');w3_close();">
-    <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
-  <div class="w3-panel w3-border" style="margin:5px 10px !important;padding:0"></div>
+  <!-- Divider -->
+  <div class="w3-panel w3-border sideNav-Divider"></div>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Canvas" onclick="doShare('sideNavItem-Canvas');w3_close();">
     <i class="fa fa-upload w3-margin-right" aria-hidden="true"></i>Submit to Canvas</a>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-ADB" onclick="doShare('sideNavItem-ADB');w3_close();">
     <i class="fa fa-upload w3-margin-right" aria-hidden="true"></i>Submit to ADB</a>
-  <div class="w3-panel w3-border" style="margin:5px 10px !important;padding:0"></div>
+  <!-- Divider -->
+  <div class="w3-panel w3-border sideNav-Divider"></div>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Trash" onclick="doShare('sideNavItem-Trash');w3_close();">
     <i class="fa fa-trash w3-margin-right"></i>Trash</a>
   </div>
@@ -162,7 +165,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
 
 <!-- Page content -->
-<div class="w3-main" style="margin-left:300px;">
+<div class="w3-main div-main-contents" id="div-main-contents1" style="margin-left:300px;">
 <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
 
 <div class="w3-container">
@@ -251,7 +254,68 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
  
 </div>
 
-	
+
+<!-- Page2 content (When clicking shared with me)-->
+<div class="w3-main div-main-contents" id="div-main-contents2" style="margin-left:300px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+
+<div class="w3-container">
+  <div class="row">
+    <div class="col">
+      <div class="w3-card w3-padding">
+              <div class="w3-row w3-border-bottom">
+            <h4><b class="card-title">SOFTENG 350 - A1</b><img class="icon link w3-hover-opacity" src="assets/icons8-link-96.png"></h4>
+          </div>
+                <div class="w3-row">
+                    <img class="avatar w3-padding w3-hover-opacity w3-border-right" src="assets/avatar1.png"><img class="initial w3-hover-opacity" src="assets/initials1.png"><img class="initial w3-hover-opacity" src="assets/initials2.png"><img class="initial w3-hover-opacity" src="assets/initials3.png">
+                </div>
+                <div class="w3-row w3-border-bottom w3-padding">
+                    <p class="w3-row">
+                        <b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b>
+                    </p>
+                </div>
+                <div class="w3-row w3-border-bottom w3-padding">
+                    <p class="w3-row"><b class="Type-of-file-text">Type of File</b>
+                        <img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon5.png">
+                    </p>
+                </div>
+                <div class="w3-row w3-padding">
+                    <a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png">
+                </div>
+            </div>
+    </div>
+    <div class="col">
+        <div class="w3-card w3-padding">
+          <div class="w3-row w3-border-bottom">
+        <h4><b class="card-title">ENGGEN 303 - TGIP</b><img class="icon link w3-hover-opacity" src="assets/icons8-link-96.png"></h4>
+          </div>
+            <div class="w3-row">
+                <img class="avatar w3-padding w3-hover-opacity" src="assets/avatar5.png"><img class="initial w3-hover-opacity" src="assets/initials3.png"><img class="initial w3-hover-opacity" src="assets/initials2.png"><img class="initial w3-hover-opacity" src="assets/initials1.png">
+            </div>
+            <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
+            <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text" style="margin-right:20%">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon2.png"></p></div>
+            <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="w3-card w3-padding">
+              <div class="w3-row w3-border-bottom">
+            <h4><b class="card-title">SOFTENG 350 - A2</b><img class="icon link w3-hover-opacity" src="assets/icons8-link-96.png"></h4>
+          </div>
+                <div class="w3-row">
+                    <img class="avatar w3-padding w3-hover-opacity w3-border-right" src="assets/avatar2.png"><img class="initial w3-hover-opacity" src="assets/initials2.png"><img class="initial w3-hover-opacity" src="assets/initials1.png"><img class="initial w3-hover-opacity" src="assets/initials3.png">
+                </div>
+                <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
+                <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon5.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+            </div>
+        </div>
+  </div>
+</div>
+ 
+</div>
+
+
 <script>
 
 function w3_open() {
