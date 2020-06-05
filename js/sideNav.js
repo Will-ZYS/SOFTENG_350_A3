@@ -26,5 +26,8 @@ function doShare(fileName) {
   } else if(fileName=="sideNavItem-Shared"){
   	document.getElementById("div-main-contents2").style.display = "block";
   	document.getElementById("div-main-contents2").className += " w3-animate-opacity";
+  } else{
+    document.getElementById("div-main-contents3").style.display = "block";
+    document.getElementById("div-main-contents3").className += " w3-animate-opacity";
   }
 }
