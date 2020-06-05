@@ -71,8 +71,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <i class="fa fa-mail-reply w3-margin-right"></i>Shared With me</a>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-PendingInvitation" onclick="doShare('sideNavItem-PendingInvitation');w3_close();">
     <i class="fa fa-hourglass-end w3-margin-right"></i>Pending Invitation</a>
-  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Computer" onclick="doShare('sideNavItem-Computer');w3_close();">
-    <i class="fa fa-desktop w3-margin-right"></i>Computer</a>
+  <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Recent" onclick="doShare('sideNavItem-Recent');w3_close();">
+    <i class="fa fa-clock-o w3-margin-right" aria-hidden="true" ></i>Recent</a>
   <!-- Divider -->
   <div class="w3-panel w3-border sideNav-Divider"></div>
   <a href="#" class="w3-bar-item w3-button sideNavItem" id="sideNavItem-Canvas" onclick="doShare('sideNavItem-Canvas');w3_close();">
@@ -119,6 +119,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
       <label>People</label>
       <input class="w3-input w3-border w3-margin-bottom w3-margin-top" type="text" placeholder="Enter email addresses or names...">
+
+      <hr>
+      <label>Sharing Message</label>
+      <textarea class="w3-input w3-border w3-margin-bottom w3-margin-top" placeholder="Enter your message here..."></textarea>
 
       <!-- Advanced sharing content -->
       <div id="advanced-sharing">
