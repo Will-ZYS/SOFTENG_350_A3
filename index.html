@@ -21,31 +21,31 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <header class="header">
 	<div class="topnav">
 		<div class="header-left">
-			<img class="logo" src="assets/icon_drive.png" alt width="40" height="40">
+			<img class="logo" src="assets/icon_drive.png" title="Drives" alt width="40" height="40">
 			<span class="title">HCI Project DRIVE</span>
 		</div>
-	  <div class="search-container">
+	  	<div class="search-container">
 			<div class="icon-background">
-				<img class="search-icon" src="assets/icon-search.png" alt width="24" height="24">
+				<img class="search-icon" src="assets/icon-search.png" title="Search" alt width="24" height="24">
 			</div>
-			<input type="search" class="search-field" placeholder="Search Drives" name="search">
+			<input type="search" id="searchInput" class="search-field" onkeyup="searchFunction()" placeholder="Search Drives" name="search">
 		</div>
 		<div class="profile">
 			<span class="profile-name">Robert</span>
-			<img class="profile-img" src="assets/img_profile.png" alt width="40" height="40">
+			<img class="profile-img" src="assets/img_profile.png" title="Your profile" alt width="40" height="40">
 		</div>
 		<div class="menu">
 			<div class="icon-background">
-				<img class="status-icon" src="assets/icon-tickbox.png" alt width="24" height="24">
+				<img class="status-icon" src="assets/icon-tickbox.png" title="Status" alt width="24" height="24">
 			</div>
 			<div class="icon-background">
-				<img class="help-icon" src="assets/icon-help.png" alt width="24" height="24">
+				<img class="help-icon" src="assets/icon-help.png" title="Support" alt width="24" height="24">
 			</div>
 			<div class="icon-background">
-				<img class="gear-icon" src="assets/icon-gear.png" alt width="24" height="24">
+				<img class="gear-icon" src="assets/icon-gear.png" title="Settings" alt width="24" height="24">
 			</div>
 			<div class="icon-background">
-				<img class="menu-icon" src="assets/icon_menu.png" alt width="24" height="24">
+				<img class="menu-icon" src="assets/icon_menu.png" title="Apps" alt width="24" height="24">
 			</div>
 		</div>
 	</div>
@@ -171,8 +171,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <div class="w3-main div-main-contents" id="div-main-contents1">
 <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
 
-<div class="w3-container">
-	<div class="row">
+<div id="grid" class="w3-container">
 		<div class="col">
 			<div class="w3-card w3-padding">
 	            <div class="w3-row w3-border-bottom">
@@ -191,9 +190,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                         <img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon5.png">
                     </p>
                 </div>
-                <div class="w3-row w3-padding">
-                    <a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png">
-                </div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png" title="Deadline: 06/06/2020"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
 		</div>
 		<div class="col">
@@ -206,7 +203,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon5.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png" title="Deadline: 10/06/2020"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
 		<div class="col">
@@ -219,11 +216,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon5.png"><img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png" title="Deadline: 07/06/2020"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
-	</div>
-	<div class="row">
         <div class="col">
 			<div class="w3-card w3-padding">
 	            <div class="w3-row w3-border-bottom">
@@ -234,7 +229,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon1.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon4.png"></p></div>
-                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png" title="Deadline: 11/06/2020"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
         <div class="col">
@@ -247,12 +242,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
                 </div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Owner-text">Owner</b><b class="Shared-people-text">Shared People</b></p></div>
                 <div class="w3-row w3-border-bottom w3-padding"><p class="w3-row"><b class="Type-of-file-text">Type of File</b><img class="file-icon" src="assets/fileIcon4.png"><img class="file-icon" src="assets/fileIcon2.png"><img class="file-icon" src="assets/fileIcon3.png"></p></div>
-                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
+                <div class="w3-row w3-padding"><a onclick="showShare()"><img class="icon w3-hover-opacity" src="assets/icons8-add-user-group-man-man-96.png"></a><img class="icon w3-hover-opacity" src="assets/icons8-star-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-download-96.png"><img class="icon w3-hover-opacity" src="assets/icons8-info-96.png" title="Deadline: 15/06/2020"><img class="icon w3-hover-opacity" src="assets/icons8-menu-vertical-96.png"></div>
             </div>
         </div>
-        <div class="col">
-        </div>
-    </div>
 </div>
  
 </div>
@@ -342,6 +334,8 @@ function w3_close() {
 <script type="text/javascript" src="js/sideNav.js"></script>
 
 <script type="text/javascript" src="js/sharing.js"></script>
+    
+<script type="text/javascript" src="js/search.js"></script>
 
 </body>
 </html> 

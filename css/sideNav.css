@@ -54,6 +54,7 @@
 
 #mySidebar{
   z-index:3;
+
   width:300px !important;
   position:fixed !important;
   /*margin-top:65px;*/
