@@ -7,15 +7,19 @@ function toggleAdvancedSharing() {
         document.getElementById('advanced-sharing').style.display = 'block';
         document.getElementById('advanced-button').innerHTML = "Cancel Advanced Sharing";
     } else {
-        document.getElementById('advanced-sharing').style.display = 'none';
-        document.getElementById('advanced-button').innerHTML = "Advanced Sharing";
+        cancelAdvancedSharing();
+    }
+}
 
-        // uncheck all the groups
-        var groups = document.getElementsByClassName("group-check");
-        var i;
-        for (i = 0; i < groups.length; i++) {
-            groups[i].checked = false;
-        }
+function cancelAdvancedSharing() {
+    document.getElementById('advanced-sharing').style.display = 'none';
+    document.getElementById('advanced-button').innerHTML = "Advanced Sharing";
+
+    // uncheck all the groups
+    var groups = document.getElementsByClassName("group-check");
+    var i;
+    for (i = 0; i < groups.length; i++) {
+        groups[i].checked = false;
     }
 }
 
@@ -38,7 +42,15 @@ function select(element) {
 
 function submitShare() {
     document.getElementById('id01').style.display = 'none';
+    clearSharing();
     document.getElementById('id02').style.display = 'block';
+}
+
+function clearSharing() {
+    document.getElementById("dropdown-button").innerHTML = "Anyone with the link can view <i class='fa fa-caret-down'></i>";
+    document.getElementById("people").value = "";
+    document.getElementById("message").value = "";
+    cancelAdvancedSharing();
 }
 
 window.onclick = (event) => {
