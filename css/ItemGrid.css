@@ -9,6 +9,7 @@
     margin-left: 5%;
 }
 
+/* Avatar positioning, sizing and alignments */
 .avatar {
 	cursor: pointer;
     width: 40%;
@@ -30,6 +31,7 @@
     margin-bottom: 5px;
 }
 
+/* Text positioning, sizing and alignments */
 .Owner-text {
     margin-left: 6%;
 }
@@ -43,6 +45,7 @@
     margin-right: 14%;
 }
 
+/* Icon positioning, sizing and alignments */
 .icon {
 	cursor: pointer;
     width: 20%;
