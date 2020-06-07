@@ -1,6 +1,10 @@
 // JavaScript Document
+// Java script for the side navigation bar
 
+// Initialise the my-drive sideNavItem to be selected 
 doShare("sideNavItem-MyDrive")
+
+// The DoShare functionality will be called when user clicks on side nav items
 function doShare(fileName) {
   // Active toggle the left option
   var i;
@@ -20,9 +24,11 @@ function doShare(fileName) {
     x[i].style.display = "none";
     x[i].className = x[i].className.replace(" w3-animate-opacity", "");
   }
+  // Displaying the main contents if MyDrive sideNavItem is selected
   if (fileName=="sideNavItem-MyDrive"){
   	document.getElementById("div-main-contents1").style.display = "block";
   	document.getElementById("div-main-contents1").className += " w3-animate-opacity";
+  // Displaying the main contents if Shared with me sideNavItem is selected
   } else if(fileName=="sideNavItem-Shared"){
   	document.getElementById("div-main-contents2").style.display = "block";
   	document.getElementById("div-main-contents2").className += " w3-animate-opacity";
