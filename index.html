@@ -91,15 +91,20 @@
   </div>
 </nav>
 
-<!-- Modal that pops up when you click on "Share File" -->
+<!-- Pop up for sharing file -->
 <div id="id01" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content modal">
+
+    <!-- top bar -->
     <div class="w3-container w3-padding top-sharing-bar">
        <span onclick="document.getElementById('id01').style.display='none'; clearSharing();"
        class="w3-button top-sharing-bar w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2>Share Project</h2>
     </div>
+
+    <!-- main content -->
     <div class="w3-panel">
+      <!-- shareable link section -->
       <label>Link sharing on</label>
       <table class="link-share">
         <tr>
@@ -122,9 +127,11 @@
 
       <hr>
 
+      <!-- people input field -->
       <label>People</label>
       <input id="people" class="w3-input w3-border w3-margin-bottom w3-margin-top" type="text" placeholder="Enter email addresses or names...">
 
+      <!-- input message -->
       <hr>
       <label>Sharing Message</label>
       <textarea id="message" class="w3-input w3-border w3-margin-bottom w3-margin-top" placeholder="Enter your message here..."></textarea>
@@ -145,6 +152,7 @@
         </div>
       </div>
 
+      <!-- buttons -->
       <div class="w3-section">
         <a class="w3-button done-button" onclick="submitShare()">Share</a>
         <a id="advanced-button" class="w3-button w3-light-grey w3-right" onclick="toggleAdvancedSharing()">Advanced Sharing</a> 
