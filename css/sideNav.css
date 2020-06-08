@@ -1,15 +1,12 @@
 /* CSS Document */
-/*
-64AFED
-3f8cda
-314582
-1E274B
-*/
+
+/*the colour palette is to be used across all blues*/
 .google-drive-blue{
   background: #3f8cda;
   color:white;
 }
 
+/*Used by the wrapper*/
 .div-wrapper{
   position: relative;
 }
@@ -19,6 +16,7 @@
   margin: 15px 0px;
 }
 
+/*Initial and hover effect for the create new project button*/
 .btn-new-project{
   transition-duration: 0.4s;
   border: 2px solid #3f8cda;
